@@ -59,6 +59,6 @@ public class LoginController {
 	            return "login/index";
 	        }
 	     
-	        return "redirect:/main/homePage";
+	        return "redirect:/setting/setting";
 	    }
 }

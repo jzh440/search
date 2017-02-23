@@ -18,13 +18,22 @@
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+  $("#search").click(function(){
+    $.get("/example/jquery/demo_test.asp",function(data,status){
+      alert("数据：" + data + "\n状态：" + status);
+    });
+  });
+});
+</script>
 	</head>
 	<body>
 		<div class="container search-main">
     <div class="input-group search-search">
         <input type="text" class="form-control" placeholder="Search for...">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button">搜索</button>
+        <button class="btn btn-default" type="button" id="search">搜索</button>
       </span>
     </div><!-- /input-group -->
     <div class="search-time"><span>搜索到相关网页5040篇，用时0.027s</span></div>
@@ -33,6 +42,7 @@
         <div>育美国硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse</div>
         <div ><span class="search-result-url">http://svse.com.cn2008-8</span><span class="search-result-tu">推广</span></div>
     </div>
+    <%@ include file="../page.jsp"%>
  </div>
 	</body>
 	<style>
