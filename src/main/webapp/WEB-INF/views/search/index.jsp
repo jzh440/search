@@ -35,7 +35,7 @@ $(document).ready(function(){
 	    		}else{
 	    			html=html+'</span></div></div>';
 	    		}
-	    		$("mylist:last").append(html);
+	    		$(".mylist:last").append(html);
 	    	});
     	}
     });
