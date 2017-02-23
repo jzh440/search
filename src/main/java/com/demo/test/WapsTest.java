@@ -1,6 +1,8 @@
 package com.demo.test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -17,8 +19,10 @@ public class WapsTest extends SpringJunitTest {
     @Test
     public void testQuery(){
         WapsMapper wapsMapper =  acx.getBean(WapsMapper.class);
-        Waps waps = new Waps();
-        waps.setWapKeyWord("haha");
-        wapsMapper.query(waps);
+        Map<String,Object> map = new HashMap<>();
+        map.put("keywords","haha");
+        map.put("begin",0);
+        map.put("end",10);
+        wapsMapper.query(map);
     }
 }
