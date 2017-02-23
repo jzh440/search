@@ -25,7 +25,7 @@ public class SearchController {
 	 * @return
 	 */
 	@RequestMapping(value = "query", method = RequestMethod.GET, produces = "application/json")
-	public List<Waps> queryIndexs(@RequestParam("keywords") String keywords) {
+	public List<Waps> queryIndexs(@RequestParam("keywords") String keywords,@RequestParam(value ="current",defaultValue = "1") int current,@RequestParam( value = "limit",defaultValue = "20") int limit) {
 		List<Waps> wapses = new ArrayList<>();
 		wapses.add(new Waps("1","2","3"));
 		wapses.add(new Waps("1","2","3"));
