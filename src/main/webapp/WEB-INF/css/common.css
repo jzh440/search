@@ -1,0 +1,131 @@
+a{
+    cursor: pointer;
+}
+.login-index {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
+    width: 400px;
+}
+.login-input-bottom {
+    margin-top: 10px;
+}
+.login-panel-footer {
+ background-color: #fff;
+    border-top-style: none;
+}
+.login-panel-footer button{
+   margin-left: 80%;
+}
+.main-maskLayer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    background-color: #8c8c8c;
+    opacity: .3;
+}
+.perferential-add{
+
+}
+.perferential-add-btn{
+    margin-top: 20px;
+    width: 600px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.perferential-add-btn .input-group{
+     float: left;
+     width: 400px;
+ }
+.perferential-add-btn .perferential-add-check{
+    float: right;
+    width: 100px;
+}
+
+.Perferenrial-add-open{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 400px;
+    z-index: 99;
+}
+.per-AddBtn {
+    margin-bottom: 20px;
+}
+.Perferenrial-add-close{
+    float: right;
+    cursor: pointer;
+}
+.Perferenrial-add-open .input-group {
+
+    margin-bottom: 10px;
+}
+.perferential-add-footer{
+    float: right;
+}
+.Perferenrial-conccession-show {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 400px;
+    z-index: 99;
+}
+
+
+.merchant-add{
+
+}
+.merchant-add-btn{
+    margin-top: 10px;
+    width: 1200px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.merchant-add-btn .input-group{
+    float: left;
+    width: 400px;
+}
+.merchant-add-btn .merchant-add-check{
+    float: right;
+    width: 100px;
+}
+
+.merchant-add-btn .merchant-add-check .merchant-add-select{
+    width: 50px;
+}
+.Merchant-add-open{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 400px;
+    z-index: 99;
+}
+.Merchant-add-close{
+    float: right;
+    cursor: pointer;
+}
+.Merchant-add-open .input-group {
+
+    margin-bottom: 10px;
+}
+.Merchant-conccession-show {
+    top: 20%;
+    left: 40%;
+    width: 400px;
+}
+
+
+.superIndex-Pop {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 400px;
+    z-index: 99;
+}
+.superIndex-pop-close{
+    float: right;
+    cursor: pointer;
+}

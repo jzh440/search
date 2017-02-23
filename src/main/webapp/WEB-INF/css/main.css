@@ -1,0 +1,27 @@
+.main-header{
+    min-width: 1200px;
+    height: 100px;
+}
+.main-centor{
+    width: 1200px;
+    height: 800px;
+
+}
+.main-right{
+    float:right;
+
+}
+.main-menu {
+    float: left;
+    width: 200px;
+    height: 100%;
+}
+.main-show {
+    float: right;
+    width: 790px;
+    height: 100%;
+}
+.main-footer{
+   min-width: 1200px;
+    height: 100px;
+}

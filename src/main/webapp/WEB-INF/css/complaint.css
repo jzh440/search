@@ -1,0 +1,97 @@
+/*introduce*/
+*{
+	margin:0;
+	padding:0;
+}
+.feeBack-main {
+    margin-top: 2rem;
+}
+.interaction label{
+    float: left;
+    display: block;
+    margin-left: .5rem;
+    height: 0.5rem;
+    width: 1.9rem;
+    font-size: .3rem;
+    overflow:hidden;
+    text-align:justify;
+    text-align-last:justify;
+}
+.interaction input{
+    float: left;
+    display: block;
+    height: 0.6rem;
+    width: 4.8rem;
+
+}
+.interaction span{
+    float: left;
+    margin-left: 1rem;
+    color: red;
+    font-size: .3rem;
+
+}
+.interaction  div {
+    margin-top: .4rem;
+    width: 10rem;
+    height: .5rem;
+    line-height: .5rem;
+    vertical-align: middle;
+}
+.interaction .interaction-word {
+    margin-top: .1rem;
+    margin-left: .5rem;
+    width: 8.5rem;
+    height: .4rem;
+    text-align: right;
+    font-size: .3rem;
+    margin-bottom: .1rem;
+}
+.interaction-word span {
+    float: none;
+    margin-left: 0rem;
+    color: black;
+    font-size: .3rem;
+}
+.interaction-textarea {
+    margin-left: .5rem;
+    width: 8.5rem;
+    height: 3rem;
+    overflow-x:hidden;
+    resize: none;
+    font-size: .4rem;
+}
+.interaction-textarea::-webkit-input-placeholder { /* WebKit browsers */
+    　　color:#555555;
+        font-size: .4rem;
+}
+.interaction-textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    　　color:#555555;
+        font-size: .4rem;
+}
+.interaction-textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+    　　color:#555555;
+        font-size: .4rem;
+}
+.interaction-textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+    　　color:#555555;
+        font-size: .4rem;
+}
+.interaction-button {
+    margin-top: 2.5rem;
+     width: 10rem;
+    height: .7rem;
+   text-align: center;
+
+}
+.interaction-button  button{
+    width: 4rem;
+    height: .7rem;
+    font-size:.4rem;
+    color: white;
+    line-height: .7rem;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #063f70;
+
+}
