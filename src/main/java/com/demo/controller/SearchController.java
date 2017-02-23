@@ -1,6 +1,6 @@
 package com.demo.controller;
 
-import com.demo.model.JsonMsg;
+
 import com.demo.model.Waps;
 import com.demo.service.WapsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 @RequestMapping("search")
