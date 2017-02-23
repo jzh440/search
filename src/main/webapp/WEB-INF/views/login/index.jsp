@@ -21,7 +21,7 @@
 <div class="container">
 
     <div class="panel panel-default login-index">
-        <form:form modelAttribute="loginFrom" action="login/managerLogin" method="POST">
+        <form:form modelAttribute="loginFrom" action="login/ogin" method="POST">
         <div class="panel-heading">
             管理员登录
         </div>
@@ -30,11 +30,11 @@
             <form:errors path="*" cssClass=""></form:errors>
             <div class="input-group">
                 <span class="input-group-addon">账号</span>
-                <input type="text" class="form-control" name="managerName">
+                <input type="text" class="form-control" name="userName">
             </div>
             <div class="input-group login-input-bottom">
                 <span class="input-group-addon">密码</span>
-                <input type="password" class="form-control" name="managerPwd">
+                <input type="password" class="form-control" name="password">
             </div>
         </div>
         <div class="panel-footer login-panel-footer">
