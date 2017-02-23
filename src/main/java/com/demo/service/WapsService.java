@@ -10,4 +10,5 @@ import java.util.List;
 public interface WapsService {
 
     public List<Waps> query(String keyswords,int current,int limit);
+    public boolean insert(Waps waps);
 }

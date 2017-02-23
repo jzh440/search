@@ -21,6 +21,12 @@ public class WapsServiceImpl implements WapsService {
     private WapsMapper mapper ;
 
     @Override
+	public boolean insert(Waps waps) {
+		// TODO Auto-generated method stub
+		return mapper.insert(waps)>0?true:false;
+	}
+
+	@Override
     public List<Waps> query(String keyswords, int current, int limit) {
         Map<String,Object> objectMap = new HashMap<>();
         objectMap.put("keyswords",keyswords);
