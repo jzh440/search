@@ -256,4 +256,14 @@ public class Waps {
     public void setIsPop(Boolean isPop) {
         this.isPop = isPop;
     }
+
+    public Waps() {
+    }
+
+    public Waps(String wapTitle, String wapDesc, String wapKeyWord) {
+
+        this.wapTitle = wapTitle;
+        this.wapDesc = wapDesc;
+        this.wapKeyWord = wapKeyWord;
+    }
 }
