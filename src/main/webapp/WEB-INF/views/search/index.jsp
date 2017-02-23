@@ -51,12 +51,12 @@ $(document).ready(function(){
         <button class="btn btn-default" type="button" id="search">搜索</button>
       </span>
     </div><!-- /input-group -->
-    <div class="search-time"><span id="mount">搜索到相关网页5040篇，用时0.027s</span></div>
-    <div id="news" class="mylist">
-        <div class="search-result-title"><span id="title">美国硅谷svse软件教育</span></div>
-        <div>育美国硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse</div>
-        <div ><span class="search-result-url">http://svse.com.cn2008-8</span><span class="search-result-tu">推广</span></div>
-    </div>
+    <div class="search-time" class="mylist"><span id="mount">搜索到相关网页5040篇，用时0.027s</span></div>
+<!--     <div id="news" class="mylist"> -->
+<!--         <div class="search-result-title"><span id="title">美国硅谷svse软件教育</span></div> -->
+<!--         <div>育美国硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse育美国硅谷svse</div> -->
+<!--         <div ><span class="search-result-url">http://svse.com.cn2008-8</span><span class="search-result-tu">推广</span></div> -->
+<!--     </div> -->
     <%@ include file="../page.jsp"%>
  </div>
 	</body>
