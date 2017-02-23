@@ -1,3 +1,4 @@
+
 package com.demo.dao;
 
 import com.demo.model.User;
@@ -39,4 +40,12 @@ public interface UserMapper extends SqlMapper {
 	 * @mbggenerated
 	 */
 	int updateByPrimaryKey(User record);
+	
+	/**
+	 * 登录
+	 * @param user
+	 * @return
+	 */
+	User login(User user);
+
 }
