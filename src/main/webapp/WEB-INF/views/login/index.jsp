@@ -21,7 +21,7 @@
 <div class="container">
 
     <div class="panel panel-default login-index">
-        <form:form modelAttribute="loginFrom" action="login/ogin" method="POST">
+        <form:form modelAttribute="loginFrom" action="login/login" method="POST">
         <div class="panel-heading">
             管理员登录
         </div>
