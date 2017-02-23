@@ -23,7 +23,7 @@ public class WapsServiceImpl implements WapsService {
     @Override
 	public boolean insert(Waps waps) {
 		// TODO Auto-generated method stub
-		return mapper.insert(waps)>0?true:false;
+		return mapper.insert(waps)>0;
 	}
 
 	@Override
@@ -33,5 +33,25 @@ public class WapsServiceImpl implements WapsService {
         objectMap.put("begin",current*limit);
         objectMap.put("end",(current+1)*limit);
         return mapper.query(objectMap);
+    }
+
+    @Override
+    public int count(String keyswords) {
+        Map<String,Object> objectMap = new HashMap<>();
+        objectMap.put("keyswords",keyswords);
+        return mapper.count(objectMap);
+    }
+
+    @Override
+    public boolean edit(Waps waps) {
+        return mapper.edit(waps) > 0;
+    }
+
+    @Override
+    public boolean delete(int[] ids) {
+        if(ids == null&& ids.length < 1){
+            return false;
+        }
+        return mapper.delete(ids) > 0;
     }
 }

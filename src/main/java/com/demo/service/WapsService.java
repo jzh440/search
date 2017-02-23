@@ -9,6 +9,13 @@ import java.util.List;
  */
 public interface WapsService {
 
+    int count(String keyswords);
+
     public List<Waps> query(String keyswords,int current,int limit);
+
     public boolean insert(Waps waps);
+
+    public boolean edit(Waps waps);
+
+    public boolean delete(int[] ids);
 }

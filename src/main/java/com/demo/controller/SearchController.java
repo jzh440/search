@@ -14,12 +14,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
+import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RequestMapping("search")
 @Controller
@@ -27,7 +31,6 @@ public class SearchController {
 
 	@RequestMapping("/index")
 	public String index() {
-		
 		return "search/index";
 	}
 
@@ -35,29 +38,40 @@ public class SearchController {
 	private WapsService wapsService;
 
 	@RequestMapping(value = "/query", method = RequestMethod.GET, produces = "application/json")
-	public List<Waps> queryIndexs(@RequestParam("keywords") String keywords,@RequestParam(value ="current",defaultValue = "1") int current,@RequestParam( value = "limit",defaultValue = "20") int limit) {
+	public Map<String,Object> queryIndexs(@RequestParam("keywords") String keywords,@RequestParam(value ="current",defaultValue = "1") int current,@RequestParam( value = "limit",defaultValue = "20") int limit) {
+		long startTime = System.currentTimeMillis();
+		int count = wapsService.count(keywords);
 		List<Waps> wapses = wapsService.query(keywords,current,limit);
-		return wapses;
+		long endTime = System.currentTimeMillis();
+		Map<String,Object> result = new HashMap<>();
+		result.put("count",count);
+		result.put("wapses",wapses);
+		result.put("time",endTime-startTime);
+		return result;
 	}
-	@RequestMapping(value = "query", method = RequestMethod.GET, produces = "application/json")
-	public String setting(@Validated SetFrom from, BindingResult result, HttpSession session, Model model) throws UserException {
-		 Waps waps = new Waps();
 
-		 waps.setIsPop(from.getIsPop());
-		 waps.setUserId(from.getUserId());
-		 waps.setWapId(from.getWapId());
-		 waps.setWapMoney(from.getWapMoney());
-		 waps.setWapDesc(from.getWapDesc());
-		 waps.setWapKeyWord(from.getWapKeyWord());
-		 waps.setWapTitle(from.getWapTitle());
-		 waps.setWapUrl(from.getWapUrl());
-		 boolean res = wapsService.insert(waps);
-	        // 用户不存在
-	        if(res){
-	            model.addAttribute("msg", CommonUtil.getTipMsg("MANAGERNOTFOUNT"));
+	@RequestMapping(value = "add", method = RequestMethod.POST,consumes ="application/json", produces = "application/json")
+	public boolean setting(@RequestBody Waps waps, BindingResult result) throws UserException {
+		if(!result.hasErrors()){
+			return false;
+		}
+		return wapsService.insert(waps);
+	}
 
-	            return "set/success";
-	        }
+	@RequestMapping(value = "edit", method = RequestMethod.POST,consumes ="application/json", produces = "application/json")
+	public boolean edit(@RequestBody Waps waps, BindingResult result) throws UserException {
+		if(!result.hasErrors()){
+			return false;
+		}
+		return wapsService.edit(waps);
+	}
+
+	@RequestMapping(value = "del", method = RequestMethod.POST,consumes ="application/json" ,produces = "application/json")
+	public boolean del(@RequestBody int[] ids, BindingResult result) throws UserException {
+		if(!result.hasErrors()){
+			return false;
+		}
+		return wapsService.delete(ids);
 	}
 
 }
