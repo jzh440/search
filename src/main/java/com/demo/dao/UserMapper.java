@@ -1,3 +1,4 @@
+
 package com.demo.dao;
 
 import com.demo.model.User;
@@ -46,4 +47,5 @@ public interface UserMapper extends SqlMapper {
 	 * @return
 	 */
 	User login(User user);
+
 }
