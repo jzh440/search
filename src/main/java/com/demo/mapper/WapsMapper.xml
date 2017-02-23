@@ -16,8 +16,8 @@
     <result column="is_ pop" property="isPop" jdbcType="BIT" />
   </resultMap>
 
-  <select id="query" parameterType="com.demo.model.Waps" resultMap="BaseResultMap">
-     SELECT * FROM `waps` WHERE wap_key_word LIKE '%'||#{wapKeyWord}||'%'
+  <select id="query" parameterType="Map" resultMap="BaseResultMap">
+     SELECT * FROM `waps` WHERE wap_key_word LIKE '%'||#{keyswords}||'%'
   </select>
 
   <insert id="insert" parameterType="com.demo.model.Waps" >

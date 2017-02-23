@@ -3,6 +3,7 @@ package com.demo.dao;
 import com.demo.model.Waps;
 
 import java.util.List;
+import java.util.Map;
 
 public interface WapsMapper extends SqlMapper {
     /**
@@ -22,5 +23,5 @@ public interface WapsMapper extends SqlMapper {
     int insertSelective(Waps record);
 
 
-    List<Waps> query(Waps record);
+    List<Waps> query(Map<String,Object> record);
 }
