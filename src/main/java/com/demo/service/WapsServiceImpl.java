@@ -24,8 +24,8 @@ public class WapsServiceImpl implements WapsService {
     public List<Waps> query(String keyswords, int current, int limit) {
         Map<String,Object> objectMap = new HashMap<>();
         objectMap.put("keyswords",keyswords);
-        objectMap.put("current",current);
-        objectMap.put("limit",limit);
+        objectMap.put("begin",current*limit);
+        objectMap.put("end",(current+1)*limit);
         return mapper.query(objectMap);
     }
 }
