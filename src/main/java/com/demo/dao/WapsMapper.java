@@ -18,4 +18,6 @@ public interface WapsMapper extends SqlMapper {
      * @mbggenerated
      */
     int insertSelective(Waps record);
+
+
 }
