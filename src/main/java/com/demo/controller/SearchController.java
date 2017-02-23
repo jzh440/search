@@ -24,12 +24,8 @@ public class SearchController {
 
 	@Autowired
 	private WapsService wapsService;
-	/**
-	 * 查询统计指标
-	 *
-	 * @return
-	 */
-	@RequestMapping(value = "query", method = RequestMethod.GET, produces = "application/json")
+
+	@RequestMapping(value = "/query", method = RequestMethod.GET, produces = "application/json")
 	public List<Waps> queryIndexs(@RequestParam("keywords") String keywords,@RequestParam(value ="current",defaultValue = "1") int current,@RequestParam( value = "limit",defaultValue = "20") int limit) {
 		List<Waps> wapses = wapsService.query(keywords,current,limit);
 		return wapses;
